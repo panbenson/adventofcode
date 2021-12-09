@@ -3,11 +3,8 @@ import read_input
 
 
 def day_nine(input_file):
-    with open(input_file, 'r') as reader:
-        lines = [list(line.strip('\n')) if line !=
-                 '\n' else [] for line in reader]
-
-    grid = [[int(i) for i in line]for line in lines]
+    lines = read_input.parse_lines(input_file)
+    grid = [[int(i) for i in line] for line in lines]
     total = 0
     for y in range(len(grid)):
         for x in range(len(grid[0])):
@@ -35,10 +32,7 @@ def check_adjacent(x, y, grid):
 
 
 def day_nine_p2(input_file):
-    with open(input_file, 'r') as reader:
-        lines = [list(line.strip('\n')) if line !=
-                 '\n' else [] for line in reader]
-
+    lines = read_input.parse_lines(input_file)
     grid = [[int(i) for i in line]for line in lines]
     low_points = []
     for y in range(len(grid)):

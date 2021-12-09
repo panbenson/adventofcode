@@ -1,3 +1,11 @@
+def parse_lines(input_file):
+    with open(input_file, 'r') as reader:
+        lines = [list(line.strip('\n')) if line !=
+                 '\n' else [] for line in reader]
+
+    return lines
+
+
 def parse_ints(input_file, delimiter=','):
     with open(input_file, 'r') as reader:
         lines = [[int(i) for i in line.strip('\n').split(delimiter) if i != '']
