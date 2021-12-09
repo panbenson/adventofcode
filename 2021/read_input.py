@@ -1,18 +1,18 @@
-def parse_ints(input_file):
+def parse_ints(input_file, delimiter=','):
     with open(input_file, 'r') as reader:
-        lines = [[int(i) for i in line.strip('\n').split(',') if i != '']
+        lines = [[int(i) for i in line.strip('\n').split(delimiter) if i != '']
                  for line in reader]
     return lines
 
 
-def parse_strings(input_file):
+def parse_strings(input_file, delimiter=','):
     with open(input_file, 'r') as reader:
-        lines = [line.strip('\n').split(',') if line !=
+        lines = [line.strip('\n').split(delimiter) if line !=
                  '\n' else [] for line in reader]
     return lines
 
 
-def group_grid(arr, type="str"):
+def group_grid(arr):
     grids = []
     grid = []
     for line in arr:
