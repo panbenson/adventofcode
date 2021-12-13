@@ -1,9 +1,9 @@
-# https://adventofcode.com/2021/day/8
+# https://adventofcode.com/2021/day/9
 import read_input
 
 
 def day_nine(input_file):
-    lines = read_input.parse_lines(input_file)
+    lines = read_input.parse_lines(input_file, True)
     grid = [[int(i) for i in line] for line in lines]
     total = 0
     for y in range(len(grid)):
@@ -32,7 +32,7 @@ def check_adjacent(x, y, grid):
 
 
 def day_nine_p2(input_file):
-    lines = read_input.parse_lines(input_file)
+    lines = read_input.parse_lines(input_file, True)
     grid = [[int(i) for i in line]for line in lines]
     low_points = []
     for y in range(len(grid)):
