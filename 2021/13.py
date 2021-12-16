@@ -12,7 +12,7 @@ def day_thirteen(input_file):
     dots = []
     folds = []
     for line in lines:
-        if line == []:
+        if line == '':
             parsed_dots = True
             continue
         if not parsed_dots:
@@ -52,7 +52,7 @@ def day_thirteen_p2(input_file):
     dots = []
     folds = []
     for line in lines:
-        if line == []:
+        if line == '':
             print('ok')
             parsed_dots = True
             continue

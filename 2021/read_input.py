@@ -1,7 +1,7 @@
 def parse_lines(input_file, split_by_char=False):
     with open(input_file, 'r') as reader:
         lines = [list(line.strip('\n')) if split_by_char else line.strip('\n') if line !=
-                 '\n' else [] for line in reader]
+                 '\n' else '' for line in reader]
 
     return lines
 
