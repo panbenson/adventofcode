@@ -1,0 +1,26 @@
+#!/bin/bash
+
+echo "creating files for day $1"
+
+# input files
+touch "2022/$1-example.in"
+touch "2022/$1.in"
+
+cat >"2022/$1.py" <<EOL
+from parser import parse_newline_delimited_array
+
+
+def part_one():
+    arr = parse_newline_delimited_array('2022/$1-example.in', lambda e: int(e))
+    # arr = parse_newline_delimited_array('2022/$1.in', lambda e: int(e))
+
+    print(arr)
+
+
+def part_two():
+    arr = parse_newline_delimited_array('2022/$1-example.in', lambda e: int(e))
+    # arr = parse_newline_delimited_array('2022/$1.in', lambda e: int(e))
+
+part_one()
+# part_two()
+EOL
